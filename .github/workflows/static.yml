@@ -25,9 +25,5 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy
-        with:
-          token: 
-          folder: ./build
-          branch: main
-          single-commit: true
+      - name: Start project
+        run: npm start
