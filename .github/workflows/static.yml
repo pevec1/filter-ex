@@ -27,7 +27,7 @@ jobs:
 
       - name: Deploy
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: 
           folder: ./build
           branch: main
           single-commit: true
