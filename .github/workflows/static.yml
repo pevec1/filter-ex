@@ -16,11 +16,6 @@ jobs:
         with:
           node-version: 18.x
 
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-
       - name: Install dependencies
         run: npm ci
 
@@ -31,7 +26,6 @@ jobs:
         run: npm run build
 
       - name: Deploy
-        uses: AndreiHarenkov/github-pages-deploy-action@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           folder: ./build
