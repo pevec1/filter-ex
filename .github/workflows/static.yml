@@ -52,5 +52,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Start project
-        run: npm start
+      - name: install serve
+        run:  npm install -g serve
+
+      - name: Start
+        run: serve -s build
